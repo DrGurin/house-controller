@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    {{> head }}
+</head>
+
+<body>
+    <h1 id="wsStatus" class="ws__status"></h1>
+    <div id="loader" class="lds-roller">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div id="viewWrapper" class="view__wrapper">
+        {{> generalInfo }}
+        {{> generalInfo }}
+        {{> generalInfo }}
+    </div>
+    <!-- JS -->
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>

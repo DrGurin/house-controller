@@ -1,0 +1,37 @@
+<div class="main__tab">
+    <div class="accordion">
+        <h1 class="accordion__name">Загальна інформація</h1>
+    </div>
+    <div class="accordion__panel">
+        <div class="pannel__item">
+            <p class="pannel__item__name">Inside</p>:&nbsp;
+            <p class="pannel__item__value">{{data.inside}}</p>
+            <p class="pannel__item__unit">&#8451;</p>
+        </div>
+
+        <div class="pannel__item">
+            <p class="pannel__item__name">Humidity inside</p>:&nbsp;
+            <p class="pannel__item__value">{{data.inh}}</p>&nbsp;
+            <p class="pannel__item__unit">0/0;</p>
+        </div>
+
+        <div class="pannel__item">
+            <p class="pannel__item__name">Outside</p>:&nbsp;
+            <p class="pannel__item__value">{{data.outside}}</p>
+            <p class="pannel__item__unit">&#8451;</p>
+        </div>
+
+        <div class="pannel__item">
+            <p class="pannel__item__name">Humidity outside</p>:&nbsp;
+            <p class="pannel__item__value">{{data.outh}}</p>
+            <p class="pannel__item__unit">&#8451;</p>
+        </div>
+
+        <div class="pannel__item">
+            <p class="pannel__item__name">Atmospheric pressure</p>:&nbsp;
+            <p class="pannel__item__value">{{data.atm}}</p>&nbsp;
+            <p class="pannel__item__unit">mm&nbsp;Hg</p>
+        </div>
+    </div>
+    {{> burger }}
+</div>

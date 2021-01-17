@@ -1,0 +1,182 @@
+@import "vendor/reset";
+@import "common/fonts";
+@import "common/loader";
+@import "common/_media-queries";
+
+html {
+    max-width: 100vw;
+}
+
+body {
+    max-width: 100vw;
+    font-family: Roboto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    background-color: #ffe227;
+    flex-direction: column;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -khtml-user-select: none;    /* Konqueror */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* Internet Explorer/Edge */
+    user-select: none;           /* Non-prefixed version */
+}
+
+.view__wrapper {
+    width: 100%;
+    max-width: 1441px;
+    height: max-content;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+
+    &.--active {
+        display: flex;
+    }
+}
+
+button {
+    border: none;
+    background: none;
+    outline: none;
+}
+
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    color: unset;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.ws__status {
+    height: fit-content;
+    border-radius: 10px;
+    width: 100%;
+    font-size: 10px;
+    padding: 3px;
+    font-weight: 100;
+    background-color: transparent;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+
+    &.success {
+        background-color: #16c79a;
+        color: #ffffff;
+    }
+
+    &.error {
+        background-color: #c70039;
+    }
+}
+
+// Styles for main tab 
+.main__tab {
+    width: 100%;
+    height: fit-content;
+    // background-color: #eb596e;
+    background: transparent;
+    // border: 2px solid #121013;
+    // box-shadow: 3px 1px 9px 0px #000;
+    border-bottom: 0;
+    border-radius: 20px;
+    position: relative;
+    margin: 5px 0;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+// Styles for accordion
+.accordion {
+    height: 58px;
+    color: #444;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+
+    @include _400 {
+        font-size: 14px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    }
+
+    // font-size: 14px;
+    background-color: #eb596e;
+    box-shadow: 3px 1px 9px 0px #000;
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+    text-align: center;
+
+    &.active {
+        // background-color: #ccc;
+    }
+
+    &__panel {
+        padding: 0 18px;
+        // background-color: white;
+        overflow: hidden;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+        display: flex;
+        flex-wrap: wrap;
+
+        & .pannel__item {
+            display: flex;
+            padding: 5px 10px;
+            border-radius: 15px;
+            border: none;
+            width: fit-content;
+            background-color: #4d375d;
+            color: #ffffff;
+            flex-wrap: nowrap;
+            margin: 10px;
+            font-weight: 400;
+
+            @include _400 {
+                font-size: 16px;
+            }
+
+            &__name {
+                width: max-content;
+            }
+        }
+    }
+}
+
+
+
+/* Components */
+@import "components/burger";
+
+/* Blocks */
+@import "blocks/generalInfo";
+// @import "blocks/mainBanner";
+// @import "blocks/ourStory";
+// @import "blocks/popularProduct";
+// @import "blocks/customerReviews";
+// @import "blocks/bundleSave";
+// @import "blocks/shopByConcern";
+// @import "blocks/footer";

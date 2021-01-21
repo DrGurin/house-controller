@@ -514,6 +514,8 @@ body {
     display: flex;
     -ms-flex-pack: center;
     justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
     padding: 5px;
     background-color: #ffe227;
     -ms-flex-direction: column;
@@ -577,6 +579,7 @@ a:focus {
     height: fit-content;
     border-radius: 10px;
     width: 100%;
+    max-width: 1441px;
     font-size: 10px;
     padding: 3px;
     font-weight: 100;

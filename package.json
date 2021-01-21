@@ -1,8 +1,8 @@
 {
     "name": "pet-hemp",
     "version": "1.0.0",
-    "description": "Pet Hemp's web-site",
-    "author": "Mykhailo Hurin && Borys Rohulia",
+    "description": "Holovenko's home",
+    "author": "Uriy Holovenko && Mykhailo Hurin",
     "devDependencies": {
         "@babel/core": "^7.12.3",
         "@babel/preset-env": "^7.12.1",

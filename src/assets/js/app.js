@@ -1,13 +1,26 @@
+let arr = require("./../../data/data.json")
 // INITING CONNECTION TO SOCKET AT FIRST
 function updateWsStatus(msg) {
   document.getElementById("wsStatus").innerHTML = msg;
   return true;
 }
 function initWebSocket() {
+  // let buttons = document.getElementsByClassName("burger__wrapper__button");
+  // let accordions = document.getElementsByClassName("accordion");
+  // let pannels = document.getElementsByClassName("accordion__panel");
+  // buttons[0].click();
+  // accordions[0].classList.toggle("active");
+  // pannels[0].style.maxHeight = pannels[0].scrollHeight + "px";
   if ("WebSocket" in window) {
     console.log("WebSocket is supported by your Browser! Initing connection");
     updateWsStatus("Initializing Websocket...");
-    const WSURI = `wss://echo.websocket.org/`;
+    
+    // from another ip 
+    // const WSURI = `ws://192.168.0.109/ws`;
+
+    // for local usage 
+    const WSURI = `ws://192.168.4.1/ws`;
+
     let ws = new WebSocket(WSURI);
     ws.onopen = function () {
       ws.send("Connection succesfull");
@@ -16,8 +29,14 @@ function initWebSocket() {
     };
     ws.onmessage = function (evt) {
       document.getElementById("wsStatus").classList.toggle("success");
-      var received_msg = evt.data;
+      var received_msg = JSON.parse(evt.data);
       console.log(`Getting PONG: ${received_msg}`);
+      document.getElementById("inside").innerHTML = received_msg.inside;
+      document.getElementById("inh").innerHTML = received_msg.inh;
+      document.getElementById("outside").innerHTML = received_msg.outside;
+      document.getElementById("outh").innerHTML = received_msg.outh;
+      document.getElementById("atm").innerHTML = received_msg.atm;
+      // console.log("GIgit", arr);
       updateWsStatus("Connected to Websocket successfully &#128513;");
       showContent(true);
     };

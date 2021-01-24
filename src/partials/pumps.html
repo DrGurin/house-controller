@@ -1,0 +1,21 @@
+<div class="main__tab">
+    <div class="accordion">
+        <h1 class="accordion__name">Pumpes</h1>
+    </div>
+    <div class="accordion__panel">
+        <div class="pannel__item">
+            <p class="pannel__item__name">Pump</p>:&nbsp;
+            <p class="pannel__item__value" id="pump">{{received_msg.pump}}</p>&nbsp;
+        </div>
+
+        <div class="pannel__item">
+            <p class="pannel__item__name">Pump Tank</p>:&nbsp;
+            <p class="pannel__item__value" id="pumpt">{{received_msg.pumpt}}</p>&nbsp;
+        </div>
+        <div class="pannel__item">
+            <p class="pannel__item__name">Gas Boiler</p>:&nbsp;
+            <p class="pannel__item__value" id="pumpgb">{{received_msg.pumpgb}}</p>&nbsp;
+        </div>
+    </div>
+    {{> burger }}
+</div>

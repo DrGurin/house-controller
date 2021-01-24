@@ -517,7 +517,10 @@ a {
       color: #ffffff;
       flex-wrap: nowrap;
       margin: 10px;
-      font-weight: 400; }
+      font-weight: 400;
+      width: 390px;
+      text-align: center;
+      justify-content: center; }
       @media (max-width: 399px) {
         .accordion__panel .pannel__item {
           font-size: 16px; } }

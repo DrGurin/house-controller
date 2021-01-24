@@ -1,0 +1,54 @@
+<div class="main__tab">
+    <div class="accordion">
+        <h1 class="accordion__name">Сонячний коллектор</h1>
+    </div>
+    <div class="accordion__panel">
+        <div class="pannel__item">
+            <p class="pannel__item__name">OUT</p>:&nbsp;
+            <p class="pannel__item__value" id="outsc">{{received_msg.outsc}}</p>
+            <p class="pannel__item__unit">&#8451;</p>
+        </div>
+
+        <div class="pannel__item">
+            <p class="pannel__item__name">IN</p>:&nbsp;
+            <p class="pannel__item__value" id="insc">{{received_msg.insc}}</p>&nbsp;
+            <p class="pannel__item__unit">0/0</p>
+        </div>
+
+        <div class="pannel__item">
+            <p class="pannel__item__name">Flow</p>:&nbsp;
+            <p class="pannel__item__value" id="flowsc">{{received_msg.flowsc}}</p>&nbsp;
+            <p class="pannel__item__unit">L/h</p>
+        </div>
+
+        <div class="pannel__item">
+            <p class="pannel__item__name">Power</p>:&nbsp;
+            <p class="pannel__item__value" id="powersc">{{received_msg.powersc}}</p>&nbsp;
+            <p class="pannel__item__unit">kW</p>
+        </div>
+
+        <div class="pannel__item">
+            <p class="pannel__item__name">Daily</p>:&nbsp;
+            <p class="pannel__item__value" id="dailysc">{{received_msg.dailysc}}</p>&nbsp;
+            <p class="pannel__item__unit">kW*h</p>
+        </div>
+        <div class="pannel__item">
+            <p class="pannel__item__name">HWS Boiler</p>:&nbsp;
+            <p class="pannel__item__value" id="hws">{{received_msg.hws}}</p>&nbsp;
+            <p class="pannel__item__unit">L/h</p>
+        </div>
+
+        <div class="pannel__item">
+            <p class="pannel__item__name">TANK</p>:&nbsp;
+            <p class="pannel__item__value" id="tank">{{received_msg.tank}}</p>&nbsp;
+            <p class="pannel__item__unit">kW</p>
+        </div>
+
+        <div class="pannel__item">
+            <p class="pannel__item__name">Pressure</p>:&nbsp;
+            <p class="pannel__item__value" id="pres">{{received_msg.pres}}</p>&nbsp;
+            <p class="pannel__item__unit">kW*h</p>
+        </div>
+    </div>
+    {{> burger }}
+</div>

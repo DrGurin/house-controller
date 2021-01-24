@@ -1,0 +1,39 @@
+<div class="main__tab">
+    <div class="accordion">
+        <h1 class="accordion__name">Valves</h1>
+    </div>
+    <div class="accordion__panel">
+        <div class="pannel__item">
+            <p class="pannel__item__name">Solar Collector</p>:&nbsp;
+            <p class="pannel__item__value" id="vsc">{{received_msg.vsc}}</p>&nbsp;
+            <p class="pannel__item__unit" id="scr">scr</p>
+        </div>
+
+        <div class="pannel__item">
+            <p class="pannel__item__name">Solid Fuel Boiler</p>:&nbsp;
+            <p class="pannel__item__value" id="vsfb">{{received_msg.vsfb}}</p>&nbsp;
+            <p class="pannel__item__unit" id="sfbr">sfbr</p>
+        </div>
+        <div class="pannel__item">
+            <p class="pannel__item__name">HWS</p>:&nbsp;
+            <p class="pannel__item__value" id="vhws">{{received_msg.vhws}}</p>&nbsp;
+            <p class="pannel__item__unit" id="hwsr">hwsr</p>
+        </div>
+        <div class="pannel__item">
+            <p class="pannel__item__name">Heating</p>:&nbsp;
+            <p class="pannel__item__value" id="vheat">{{received_msg.vheat}}</p>&nbsp;
+            <p class="pannel__item__unit" id="hr">hr</p>
+        </div>
+        <div class="pannel__item">
+            <p class="pannel__item__name">Tank</p>:&nbsp;
+            <p class="pannel__item__value" id="vtank">{{received_msg.vtank}}</p>&nbsp;
+            <p class="pannel__item__unit" id="tr">tr</p>
+        </div>
+        <div class="pannel__item">
+            <p class="pannel__item__name">Pool</p>:&nbsp;
+            <p class="pannel__item__value" id="vpool">{{received_msg.vpool}}</p>&nbsp;
+            <p class="pannel__item__unit" id="pr">pr</p>
+        </div>
+    </div>
+    {{> burger }}
+</div>
